@@ -25,7 +25,7 @@ const ThemeSwitch: React.FC = () => {
 
   return (
     <div>
-      <div>
+      <div className="hidden">
         <div>The current theme is: {theme}</div>
       </div>
       <div>
@@ -35,7 +35,7 @@ const ThemeSwitch: React.FC = () => {
 
           {/* sun icon 选中状态 */}
           <svg
-            className="swap-on h-10 w-10 fill-current"
+            className="swap-on h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -44,7 +44,7 @@ const ThemeSwitch: React.FC = () => {
 
           {/* moon icon 未选中状态 */}
           <svg
-            className="swap-off h-10 w-10 fill-current"
+            className="swap-off h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >

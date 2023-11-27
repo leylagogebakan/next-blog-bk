@@ -18,7 +18,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+    // appearance={{ // 修改 sign-in/sign-up 页面式样
+    //   elements: {
+    //     formButtonPrimary: "bg-primary", // continue/submit按钮 背景色
+    //     footerActionLink: "text-primary hover:text-error", // 最后一行 sign-up/sign-in 链接的式样
+    //   },
+    // }}
+    >
       <html lang="zh-CN" suppressHydrationWarning>
         <body className={inter.className}>
           <ThemeProvider
