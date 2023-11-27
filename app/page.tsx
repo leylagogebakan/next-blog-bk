@@ -1,4 +1,5 @@
 import ThemeSwitch from "@/components/ThemeSwitch";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -10,6 +11,10 @@ export default function Home() {
 
         <div>
           <ThemeSwitch />
+        </div>
+
+        <div>
+          <UserButton afterSignOutUrl="/" />
         </div>
       </div>
     </main>
