@@ -2,6 +2,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 import ThemeSwitch from "./ThemeSwitch";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered w-24 md:w-auto"
+            className="input input-bordered w-36 md:w-auto"
           />
         </div>
 
@@ -42,6 +43,9 @@ const Navbar = () => {
             // }}
           />
         </SignedIn>
+
+        {/* 手机菜单 */}
+        <MobileNav />
       </div>
     </div>
   );
