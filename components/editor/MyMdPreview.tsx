@@ -1,14 +1,28 @@
-"use client"
+"use client";
 
-import React  from "react";
+import React, { useState, useEffect } from "react";
 import { MdPreview } from "md-editor-rt";
 import "md-editor-rt/lib/preview.css";
 import { useTheme } from "next-themes";
 
 const MyMdPreview = ({ id, cnt }: { id: string; cnt: string }) => {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
-  console.log('theme------', theme)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    // 服务端不管theme
+    return (
+      <>
+        <MdPreview editorId={id} modelValue={cnt} />
+      </>
+    );
+  }
+
+  console.log("client theme: ", theme);
 
   return (
     <>

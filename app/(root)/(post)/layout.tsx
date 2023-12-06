@@ -4,10 +4,10 @@ import React from "react";
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="relative">
-      <NavBar />
-      <div>
-        <section className="mx-auto min-h-screen w-full">{children}</section>
+      <div className="sticky top-0 z-10">
+        <NavBar />
       </div>
+      <div>{children}</div>
     </main>
   );
 };

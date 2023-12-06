@@ -6,7 +6,7 @@ import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar border-b-2 border-slate-300 bg-base-100">
       <div className="flex-1">
         <Link href="/" className="btn btn-ghost text-xl">
           <p className="text-2xl font-bold leading-8">
