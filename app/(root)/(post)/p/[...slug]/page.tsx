@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { UserIcon, CalendarDaysIcon } from "@heroicons/react/24/outline";
 import MyCatalog from "@/components/editor/MyCatalog";
 import MyMdPreview from "@/components/editor/MyMdPreview";
 import React from "react";
@@ -39,21 +39,11 @@ const PostDetailPage = async ({ params }: { params: { slug: string } }) => {
             <h1 className="mx-auto text-3xl font-bold">{postDetail.title}</h1>
             <div className="flex items-center justify-center space-x-4">
               <div className="flex space-x-1">
-                <Image
-                  src="/assets/icons/user.svg"
-                  alt="作者"
-                  width={24}
-                  height={24}
-                />
+                <UserIcon className="h-6 w-6" />
                 <span>{postDetail.author}</span>
               </div>
               <div className="flex space-x-1">
-                <Image
-                  src="/assets/icons/calendar-days.svg"
-                  alt="文章发布日期"
-                  width={24}
-                  height={24}
-                />
+                <CalendarDaysIcon className="h-6 w-6" />
                 <span>{postDetail.createAt}</span>
               </div>
             </div>
