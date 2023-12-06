@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { MdCatalog } from "md-editor-rt";
 import { useTheme } from "next-themes";
+import { generateMdHeadingId } from "@/lib/MdEditorUtil";
 
 const MyCatalog = ({ id }: { id: string }) => {
   const [mounted, setMounted] = useState(false);
@@ -22,6 +23,7 @@ const MyCatalog = ({ id }: { id: string }) => {
   return (
     <MdCatalog
       editorId={id}
+      mdHeadingId={generateMdHeadingId}
       theme={theme === "light" ? "light" : "dark"}
       offsetTop={90}
       scrollElement={scrollElement}
