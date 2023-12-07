@@ -9,11 +9,15 @@ import {
   ChatBubbleLeftEllipsisIcon,
 } from "@heroicons/react/24/outline";
 import { formatCount } from "@/lib/CommonUtils";
+import * as NProgress from "nprogress";
 
 const PostCard = ({ post }: { post: Post }) => {
   const router = useRouter();
 
   const routeToDetail = () => {
+    // 进度条
+    NProgress.start();
+    // 导航
     router.push(`/p/${post.id}`);
   };
 
