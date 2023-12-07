@@ -2,6 +2,7 @@ import { UserIcon, CalendarDaysIcon } from "@heroicons/react/24/outline";
 import MyCatalog from "@/components/editor/MyCatalog";
 import MyMdPreview from "@/components/editor/MyMdPreview";
 import React from "react";
+import BackToTop from "@/components/shared/BackToTop";
 
 interface PostDetail {
   slug: string;
@@ -59,6 +60,8 @@ const PostDetailPage = async ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
       </div>
+
+      <BackToTop />
     </main>
   );
 };
