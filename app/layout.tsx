@@ -4,7 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/context/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
-import NextTopLoader from 'nextjs-toploader';
+import NextTopLoader from "nextjs-toploader";
+import ProgressStop from "@/components/shared/ProgressStop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,8 +31,9 @@ export default function RootLayout({
       <html lang="zh-CN" suppressHydrationWarning>
         <body className={inter.className}>
           <NextTopLoader />
+          <ProgressStop />
           <ThemeProvider
-            value={{ light: "garden", dark: "night" }}
+            value={{ light: "garden", dark: "dark" }}
             defaultTheme="dark"
           >
             {children}
