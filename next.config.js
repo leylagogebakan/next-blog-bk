@@ -17,6 +17,9 @@ const nextConfig = {
       {
         hostname: "**.sixmillions.cn",
       },
+      {
+        hostname: "picsum.photos",
+      },
     ],
   },
 };
