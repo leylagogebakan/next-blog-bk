@@ -9,3 +9,7 @@ export interface Post {
   comments: number,
   publishDate: string,
 }
+
+export interface SearchParamsProps {
+  searchParams: { [key: string]: string | string[] | undefined }
+}
