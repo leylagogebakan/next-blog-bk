@@ -23,8 +23,8 @@ const PostCard = ({ post }: { post: Post }) => {
 
   return (
     <div className="flex items-start justify-center">
-      <div className="card glass w-96 overflow-hidden">
-        <figure onClick={routeToDetail}>
+      <div className="card glass w-96 overflow-hidden" onClick={routeToDetail}>
+        <figure>
           {/* width和height是必须参数，用css方式设置Image的高度，需要设置为0 */}
           <Image
             src={post.thumbnail}
@@ -46,11 +46,11 @@ const PostCard = ({ post }: { post: Post }) => {
             <div className="badge badge-ghost">{post.publishDate}</div>
             <div className="card-actions justify-end">
               <div className="badge gap-2">
-                <EyeIcon className="h-6 w-6" />
+                <EyeIcon className="h-5 w-5" />
                 {formatCount(post.views)}
               </div>
               <div className="badge gap-2">
-                <ChatBubbleLeftEllipsisIcon className="h-6 w-6" />
+                <ChatBubbleLeftEllipsisIcon className="h-5 w-5" />
                 {formatCount(post.likes)}
               </div>
             </div>
